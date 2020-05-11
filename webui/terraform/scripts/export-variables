@@ -4,6 +4,6 @@ export PROJECT="PIGEON"
 export TF_HOME="/apps"
 export TF_LANDSCAPE_ENABLED="false"
 export PATH=/apps:$PATH
-export WORKSPACE=/apps/pigeon/web-ui/terraform
+export WORKSPACE=/apps/pigeon/webui/terraform
 export APPNAME="webui"
 export S3_BUCKET="<s3bucketname>"
