@@ -20,11 +20,9 @@ Installation Steps:
 
 2) Create iam role name ec2-admin and attach below policies
 
- AmazonEC2FullAccess
- AmazonS3FullAccess
- AmazonVPCFullAccess
+ AmazonEC2FullAccess, AmazonS3FullAccess, AmazonVPCFullAccess
 
-3) Import any of your Public Key in aws (key pairs) with the name webuikey
+3) Import any of your Public Key in awsconsole (key pairs) with the name webuikey
 
 4) Create AWS instance Amazon LInux2 - t2.micro and attach iam role to the instance
 
@@ -40,7 +38,7 @@ https://github.com/smadhulika/pigeon.git
 vi export-variables
 export S3_BUCKET="<s3bucketname>"  
 
-#Note: Change your s3 bucket name to store terraform state ( Mandatory) . Any other if you modified the directory structure 
+#Note: Change your s3 bucket name to store terraform state ( Mandatory) . Any other if you modified the directory structure  and in ansible vars also
 
 
 8) Excute the below scripts to provision infrastruture, Provision Ec2 instance, create Docker container & Install Webui application

@@ -12,14 +12,14 @@
 - name: Generate Docker file
   template:
    src: dockerfile.j2
-   dest: /apps/web-ui/app/Dockerfile
+   dest: "{{ webui_source_dir }}/Dockerfile"
 
 - name: Build the docker file
   shell: "docker build -t pigeon/webui ."
   args:
-   chdir: /apps/web-ui/app
+   chdir: "{{ webui_source_dir }}"
 
 - name: Run the container
   shell: "nohup docker run -p 8080:8080 pigeon/webui build:dev &"
   args:
-   chdir: /apps/web-ui/app
+   chdir: "{{ webui_source_dir }}"
