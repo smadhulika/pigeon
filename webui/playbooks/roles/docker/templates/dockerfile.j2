@@ -1,0 +1,11 @@
+# SPECIFY BASE IMAGE
+FROM node:alpine
+WORKDIR /usr/app
+#INSTALL DEPENDENCIES
+COPY ./package.json ./
+RUN npm install
+COPY ./ ./
+RUN mkdir uploads
+RUN echo "welcome to pigeon Lab" > /usr/app/uploads/pigeon
+# COMMAND
+ENTRYPOINT ["npm", "run"]

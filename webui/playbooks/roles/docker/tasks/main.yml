@@ -1,0 +1,25 @@
+---
+- name: ensure a list of packages installed
+  yum:
+   name: "docker"
+   state: present
+
+- name: start Docker server
+  service:
+   name: "docker"
+   state: started
+
+- name: Generate Docker file
+  template:
+   src: dockerfile.j2
+   dest: /apps/web-ui/app/Dockerfile
+
+- name: Build the docker file
+  shell: "docker build -t pigeon/webui ."
+  args:
+   chdir: /apps/web-ui/app
+
+- name: Run the container
+  shell: "nohup docker run -p 8080:8080 pigeon/webui build:dev &"
+  args:
+   chdir: /apps/web-ui/app

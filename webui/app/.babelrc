@@ -1,0 +1,15 @@
+{
+    "presets": [
+        [
+        "@babel/env", {
+          "targets": {
+            "node": "8.9.0"
+          }
+        } 
+      ]
+    ],
+    "plugins": [
+      ["@babel/plugin-proposal-decorators", { "legacy": true }],
+      "@babel/transform-runtime"
+    ]
+}
