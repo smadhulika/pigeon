@@ -10,7 +10,10 @@ This is one simple thought which i find in my mind and written the code. There a
 
 Tools:
 =====
-AWS , Terraform, Ansible, Docker(written docker file)
+AWS\
+Terraform
+Ansible
+Docker(written docker file)
 
 
 Installation Steps:
