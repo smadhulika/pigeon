@@ -71,4 +71,11 @@ Note: if you want to use own repository to test the code. Create a public repo a
 
 
 
+10) Once tested you use the below script to destroy complete setup
+
+./terraform-destroy.sh
+
+
+
+
 Stay Home & Safe !!
